@@ -25,16 +25,24 @@ public class Lab1 {
         double diemTB = sc.nextDouble();
         System.out.printf("%s %f điểm%n", hoTen, diemTB);
     }
-    
+
     private static void bai2() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Lab 1 - bai 2");
-        System.out.println("Nhập độ dài 2 cạnh của hình chữ nhật: ");
+        System.out.print("Nhập độ dài 2 cạnh của hình chữ nhật: ");
         int x = sc.nextInt();
         int y = sc.nextInt();
         System.out.printf("Chu vi hình chữ nhật: %d%n", (x + y) * 2);
         System.out.printf("Diện tích hình chữ nhật: %d%n", x * y);
         System.out.printf("Cạnh nhỏ nhất hình chữ nhật: %d%n", Math.min(x, y));
+    }
+
+    private static void bai3() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Lab 1 - bài 3");
+        System.out.print("Nhập độ dài cạnh của khối lập phương: ");
+        int x = sc.nextInt();
+        System.out.printf("Thể tích khối lập phương: %d%n", (int)Math.pow(x, 3));
     }
 
     /**
@@ -48,8 +56,9 @@ public class Lab1 {
             throw new InternalError("VM does not support mandatory encoding UTF-8");
         }
 
-        //Lab1.bai1();
-        Lab1.bai2();
+//        Lab1.bai1();
+//        Lab1.bai2();
+        Lab1.bai3();
     }
 
 }
