@@ -65,6 +65,44 @@ public class Lab2 {
         System.out.printf("Tiền điện của tháng là: %d%n", res);
     }
 
+    private static void bai4() {
+        Scanner sc = new Scanner(System.in);
+        int choice;
+        do {
+            System.out.println("Lab 2 - bài 4");
+            System.out.println("+---------------------------+");
+            System.out.println("1. Giải phương trình bậc nhất");
+            System.out.println("2. Giải phương trình bậc hai");
+            System.out.println("3. Tính tiên điện");
+            System.out.println("4. Kết thúc");
+            System.out.println("+---------------------------+");
+            System.out.print("Chọn chức năng: ");
+            choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println("1. Giải phương trình bậc nhất");
+                    Lab2.bai1();
+                    break;
+                case 2:
+                    System.out.println("2. Giải phương trình bậc hai");
+                    Lab2.bai2();
+                    break;
+                case 3:
+                    System.out.println("3. Tính tiên điện");
+                    Lab2.bai3();
+                    break;
+                case 4:
+                    System.out.println("4. Kết thúc");
+                    break;
+                default:
+                    System.out.println("Lựa chọn không hợp lệ");
+                    break;
+            }
+
+            System.out.printf("%n%n");
+        } while (choice != 4);
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -77,6 +115,7 @@ public class Lab2 {
         }
 //        Lab2.bai1();
 //        Lab2.bai2();
-        Lab2.bai3();
+//        Lab2.bai3();
+        Lab2.bai4();
     }
 }
