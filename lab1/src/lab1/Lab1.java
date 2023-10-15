@@ -42,7 +42,24 @@ public class Lab1 {
         System.out.println("Lab 1 - bài 3");
         System.out.print("Nhập độ dài cạnh của khối lập phương: ");
         int x = sc.nextInt();
-        System.out.printf("Thể tích khối lập phương: %d%n", (int)Math.pow(x, 3));
+        System.out.printf("Thể tích khối lập phương: %d%n", (int) Math.pow(x, 3));
+    }
+
+    private static void bai4() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Lab 1 - bai 4");
+        System.out.print("Nhập các hệ số a, b, c của phương trình bậc 2: ");
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+        double delta = Math.pow(b, 2) - 4 * a * c;
+        if (delta < 0) {
+            System.out.println("Phương trình vô nghiệm");
+        } else if (delta == 0) {
+            System.out.printf("Phương trình có nghiệm kép x1 = x2 = %f%n", -b / (2 * a));
+        } else {
+            System.out.printf("Phương trình có nghiệm x1 = %f, x2 = %f%n", (-b + Math.sqrt(delta)) / (2 * a), (-b - Math.sqrt(delta)) / (2 * a));
+        }
     }
 
     /**
@@ -58,7 +75,8 @@ public class Lab1 {
 
 //        Lab1.bai1();
 //        Lab1.bai2();
-        Lab1.bai3();
+//        Lab1.bai3();
+        Lab1.bai4();
     }
 
 }
