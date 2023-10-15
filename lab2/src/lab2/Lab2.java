@@ -18,6 +18,7 @@ public class Lab2 {
 
     private static void bai1() {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Lab 2 - bài 1");
         System.out.print("Nhập hệ số a, b của phương trình bậc nhất: ");
         double a = sc.nextDouble();
         double b = sc.nextDouble();
@@ -34,7 +35,7 @@ public class Lab2 {
 
     private static void bai2() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Lab 1 - bai 4");
+        System.out.println("Lab 2 - bai 2");
         System.out.print("Nhập các hệ số a, b, c của phương trình bậc 2: ");
         double a = sc.nextDouble();
         double b = sc.nextDouble();
@@ -49,6 +50,21 @@ public class Lab2 {
         }
     }
 
+    private static void bai3() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Lab 2 - bài 3");
+        System.out.print("Nhập vào số điện sử dụng trong tháng: ");
+        int x = sc.nextInt();
+        int res = 0;
+        if (x < 50) {
+            res = x * 1000;
+        } else {
+            res = 50 * 1000 + (x - 50) * 1200;
+        }
+
+        System.out.printf("Tiền điện của tháng là: %d%n", res);
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -60,6 +76,7 @@ public class Lab2 {
             throw new InternalError("VM does not support mandatory encoding UTF-8");
         }
 //        Lab2.bai1();
-        Lab2.bai2();
+//        Lab2.bai2();
+        Lab2.bai3();
     }
 }
