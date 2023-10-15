@@ -32,6 +32,23 @@ public class Lab2 {
         }
     }
 
+    private static void bai2() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Lab 1 - bai 4");
+        System.out.print("Nhập các hệ số a, b, c của phương trình bậc 2: ");
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+        double delta = Math.pow(b, 2) - 4 * a * c;
+        if (delta < 0) {
+            System.out.println("Phương trình vô nghiệm");
+        } else if (delta == 0) {
+            System.out.printf("Phương trình có nghiệm kép x1 = x2 = %f%n", -b / (2 * a));
+        } else {
+            System.out.printf("Phương trình có nghiệm x1 = %f, x2 = %f%n", (-b + Math.sqrt(delta)) / (2 * a), (-b - Math.sqrt(delta)) / (2 * a));
+        }
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -42,6 +59,7 @@ public class Lab2 {
         } catch (UnsupportedEncodingException e) {
             throw new InternalError("VM does not support mandatory encoding UTF-8");
         }
-        Lab2.bai1();
+//        Lab2.bai1();
+        Lab2.bai2();
     }
 }
